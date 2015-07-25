@@ -1,0 +1,60 @@
+'.source.livescript':
+
+  'import redux':
+    prefix: 'rdx-ipt'
+    body: '''
+      require! redux: { $1 }
+    '''
+
+  'import redux/react':
+    prefix: 'rdx-iptc'
+    body: '''
+      require! 'react-redux': { $1 }
+    '''
+
+  'action':
+    prefix: 'rdx-act'
+    body: '''
+      export ${1:add-todo}: ($2) ->
+        $3
+    '''
+
+  'async-action':
+    prefix: 'rdx-acta'
+    body: '''
+      export ${1:add-todo}: ($2) ->
+        (dispatch, get-state) ->
+          $4
+
+          dispatch $3
+    '''
+
+  'action-type':
+    prefix: 'rdx-tp'
+    body: '''
+      export const $1 = '$1'$2
+    '''
+
+  'actions-map':
+    prefix: 'rdx-map'
+    body: '''
+      const actions-map =
+        "#{$1}": (state, action) ->
+          $2
+    '''
+
+  'map-action':
+    prefix: 'rdx-mapact'
+    body: '''
+      \"#{$1}\": (state, action) ->
+        $2
+    '''
+
+  'reducer':
+    prefix: 'rdxer'
+    body: '''
+      module.exports = function ${1:todos} state = initial-state, action
+        $2
+
+        state
+    '''

@@ -1,0 +1,60 @@
+'.source.coffee':
+
+  'import redux':
+    prefix: 'rdx-ipt'
+    body: '''
+      { $1 } = require 'redux'
+    '''
+
+  'import redux/react':
+    prefix: 'rdx-iptc'
+    body: '''
+      { $1 } = require 'react-redux'
+    '''
+
+  'action':
+    prefix: 'rdx-act'
+    body: '''
+      exports.${1:addTodo} = ($2) ->
+        $3
+    '''
+
+  'async-action':
+    prefix: 'rdx-acta'
+    body: '''
+      exports.${1:addTodo} = ($2) ->
+        (dispatch, getState) ->
+          $4
+
+          dispatch $3
+    '''
+
+  'action-type':
+    prefix: 'rdx-tp'
+    body: '''
+      exports.$1 = '$1'$2
+    '''
+
+  'actions-map':
+    prefix: 'rdx-map'
+    body: '''
+      actionsMap =
+        \"#{$1}\": (state, action) ->
+          $2
+    '''
+
+  'map-action':
+    prefix: 'rdx-mapact'
+    body: '''
+      \"#{$1}\": (state, action) ->
+        $2
+    '''
+
+  'reducer':
+    prefix: 'rdxer'
+    body: '''
+      module.exports = (state = initialState, action) ->
+        $2
+
+        state
+    '''

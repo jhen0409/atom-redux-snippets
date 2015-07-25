@@ -1,0 +1,73 @@
+'.source.js.jsx':
+
+  'import redux':
+    prefix: 'rdx-ipt'
+    body: '''
+      import { $1 } from 'redux';
+    '''
+
+  'import redux/react':
+    prefix: 'rdx-iptc'
+    body: '''
+      import { $1 } from 'react-redux';
+    '''
+
+  'action':
+    prefix: 'rdx-act'
+    body: '''
+      export function ${1:addTodo}($2) {
+        $4
+
+        return {
+          $3
+        };
+      }
+    '''
+
+  'async-action':
+    prefix: 'rdx-acta'
+    body: '''
+      export function ${1:addTodo}($2) {
+        return (dispatch, getState) => {
+          $4
+
+          dispatch({
+            $3
+          });
+        };
+      }
+    '''
+
+  'action-type':
+    prefix: 'rdx-tp'
+    body: '''
+      export const $1 = '$1';$2
+    '''
+
+  'actions-map':
+    prefix: 'rdx-map'
+    body: '''
+      const actionsMap = {
+        [$1]: (state, action) => {
+          $2
+        }
+      };
+    '''
+
+  'map-action':
+    prefix: 'rdx-mapact'
+    body: '''
+      [$1]: (state, action) => {
+        $2
+      }
+    '''
+
+  'reducer':
+    prefix: 'rdxer'
+    body: '''
+      export default function ${1:todos}(state = initialState, action) {
+        $2
+
+        return state;
+      }
+    '''
