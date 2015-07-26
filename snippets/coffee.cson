@@ -58,3 +58,11 @@
 
         state
     '''
+
+  'middleware':
+    prefix: 'rdx-mdw'
+    body: '''
+      module.exports = ({ dispatch, getState }) ->
+        next -> action ->
+          $2
+    '''
