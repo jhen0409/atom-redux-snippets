@@ -12,11 +12,11 @@ Atom snippets for [Redux](https://github.com/gaearon/redux). This snippets uses 
 
  - import redux (rdx-ipt)
 ```js
-import { $1 } from 'redux';
+import { ${1:applyMiddleware, createStore, combineReducers, compose, bindActionCreators} } from 'redux';
 ```
  - import react-redux (rdx-iptc)
 ```js
-import { $1 } from 'react-redux';
+import { ${1:Provider, Connector} } from 'react-redux';
 ```
  - action (rdx-act)
 ```js
@@ -64,6 +64,15 @@ export default function ${1:todos}(state = initialState, action) {
   $2
 
   return state;
+}
+```
+ - middleware (rdx-mdw)
+```js
+export default function $1({ dispatch, getState }) {
+  return next => action => {
+
+    $2
+  };
 }
 ```
 

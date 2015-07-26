@@ -3,13 +3,13 @@
   'import redux':
     prefix: 'rdx-ipt'
     body: '''
-      { $1 } = require 'redux'
+      { ${1:applyMiddleware, createStore, combineReducers, compose, bindActionCreators} } = require 'redux'
     '''
 
   'import redux/react':
     prefix: 'rdx-iptc'
     body: '''
-      { $1 } = require 'react-redux'
+      { ${1:Provider, Connector} } = require 'react-redux'
     '''
 
   'action':
