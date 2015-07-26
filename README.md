@@ -71,7 +71,7 @@ export default function ${1:todos}(state = initialState, action) {
 export default function $1({ dispatch, getState }) {
   return next => action => {
 
-    $2
+    ${2: next(action);}
   };
 }
 ```

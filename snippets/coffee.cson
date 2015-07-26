@@ -64,5 +64,5 @@
     body: '''
       module.exports = ({ dispatch, getState }) ->
         next -> action ->
-          $2
+          ${2:next action}
     '''
