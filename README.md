@@ -67,7 +67,7 @@ export default function ${1:todos}(state = initialState, action) {
 }
 ```
 
-about LiveScript, CoffeeScript snippets generated code, see [live.json](snippets/live.cson) and [coffee.json](snippets/coffee.cson).
+about LiveScript, CoffeeScript snippets generated code, see [live.cson](snippets/live.cson) and [coffee.cson](snippets/coffee.cson).
 
 ## LICENSE
 
