@@ -9,7 +9,7 @@
   'import redux/react':
     prefix: 'rdx-iptc'
     body: '''
-      require! 'react-redux': { ${1:Provider, Connector} }
+      require! 'react-redux': { ${1:Provider, connect} }
     '''
 
   'action':
@@ -53,8 +53,8 @@
   'reducer':
     prefix: 'rdxer'
     body: '''
-      module.exports = function ${1:todos} state = initial-state, action
-        $2
+      module.exports = (state = initial-state, action) ->
+        $1
 
         state
     '''
@@ -62,7 +62,7 @@
   'middleware':
     prefix: 'rdx-mdw'
     body: '''
-      module.exports = function ${1:todos} { dispatch, getState }
+      module.exports = ({ dispatch, getState }) ->
         next -> action ->
-          ${2:next action}
+          ${1:next action}
     '''

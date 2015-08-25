@@ -1,10 +1,10 @@
 # Atom Redux Snippets
 
-Atom snippets for [Redux](https://github.com/gaearon/redux). This snippets uses Babel(ES6), CoffeeScript, LiveScript syntax.
+Atom snippets for [Redux](https://github.com/gaearon/redux). This snippets uses Babel(ES2015, ES2016), CoffeeScript, LiveScript syntax.
 
 ## Support Language
 
- - Babel (ES6)
+ - Babel (ES2015, ES2016)
  - CoffeeScript
  - LiveScript
 
@@ -16,8 +16,9 @@ import { ${1:applyMiddleware, createStore, combineReducers, compose, bindActionC
 ```
  - import react-redux (rdx-iptc)
 ```js
-import { ${1:Provider, Connector} } from 'react-redux';
+import { ${1:Provider, connect} } from 'react-redux';
 ```
+
  - action (rdx-act)
 ```js
 export function ${1:addTodo}($2) {
