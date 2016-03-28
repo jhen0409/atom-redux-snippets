@@ -9,7 +9,7 @@
   'import redux/react':
     prefix: 'rdx-iptc'
     body: '''
-      import { ${1:Provider, Connector} } from 'react-redux';
+      import { ${1:Provider, connect} } from 'react-redux';
     '''
 
   'action':
